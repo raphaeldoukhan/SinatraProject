@@ -1,7 +1,17 @@
-<% gossips.each do |gossip| %>
-  <p>
-    <%= gossip.author %><br/>
-    <%= gossip.content %>
-  </p>
-<% end %>
-
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Mon super site de gossip !</h1>
+    <a href="/gossips/new/">Ajouter une potin</a>
+  
+  <% gossips.each_with_index do |gossip,index| %>
+    <p>
+    <a href="/gossips/<%=index%>"><%= index+1 %><br/></a>
+      <%= gossip.author %><br/>
+      <%= gossip.content %>
+    </p>
+  <% end %>
+  </body>
+</html>
