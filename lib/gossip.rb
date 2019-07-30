@@ -23,10 +23,8 @@ class Gossip
         return all_gossips
       end
       
-    def self.find(index)
-    puts Gossip.all[index]
+    def self.find(id)
+      return Gossip.all[id]
     end
 
 end
-
-#binding.pry
